@@ -36,6 +36,7 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 /* Acá va tu código */
     #ejercicioCuatro {
         position: fixed;
+        top: 0px; left: 0px;
     }
 
 
@@ -44,9 +45,32 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 /* Acá va tu código */
 
     #ejercicioCinco {
-        flex-direction: center;
-        align-items: flex-start;
-    }
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        }
  
 
 /* Ejercicio 6. */
+
+    #ejercicioCinco  {
+        flex-direction: row-reverse;
+    }  
+
+/* Ejercicio 7. */
+
+#ejercicioSiete {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    background-color: rgb(202, 1, 1);
+}
+#elementoUno {
+    text-align: left;
+    border-color: mediumblue;
+}
+#elementoTres {
+    border-style: groove;
+}
