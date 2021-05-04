@@ -1,2 +1,28 @@
-<!DOCTYPE html>
-<html>
+
+            h1 {
+                color: tan;
+            }
+            #img {
+                width: 400px;
+            } 
+            a {
+                color: yellow;
+            }
+            #thirdDiv {
+                width: 500px;
+                height: 600px;
+                background-color:black;
+                padding: 50px;
+                border-style: double;
+                border-color: rgb(250, 0, 0);
+            }
+            #spanId {
+                font-size: 18px;
+                margin: 50px;
+            }
+            html {
+                background-image: radial-gradient(red, blue);
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: center;
+              }
