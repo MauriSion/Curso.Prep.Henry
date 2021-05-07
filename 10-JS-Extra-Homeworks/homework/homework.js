@@ -34,16 +34,14 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-  var parteEnMinuscula = ""
-  var parteEnMayuscula = ""
-  for (let a in s) {
-    if (esMayuscula(s[a])) { parteEnMayuscula += s[a] } //si es mayuscula va para un lado y si es minuscula va para otro
-    else { parteEnMinuscula += s[a] }
-  }
-  function esMayuscula(letra) {
-    return letra === letra.toUpperCase() //compara las letra entre mayusculas y minusculas//
-  }
-  return parteEnMayuscula + parteEnMinuscula;
+  var min = "", max = ""
+  for (let i= 0; i < s.length; i++) {
+    const letra = s[i];
+    if (letra === letra.toUpperCase()) {
+      max += letra}
+     else min += letra
+      }
+  return max + min;
 }
 
 
@@ -53,22 +51,11 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  var acumuladorDePalabras = "";
-  var fraseFinalRetornada = "";
-  for (let a in str) {
-    if (str[a] === " ") {
-      fraseFinalRetornada += invertirPalabra(acumuladorDePalabras) + " ";
-      acumuladorDePalabras = "";
-    } //si la letra es igual a un espacio agraga a la salida la palabra acumulada invertida y borra la palabra acumulada para reutilizarla//
-    else acumuladorDePalabras += str[a];
-    if (parseInt(a, 10) === str.length- 1) {
-      fraseFinalRetornada += invertirPalabra(acumuladorDePalabras)
-    }
+  var alReves = ""
+  for( var i = str.length-1; i>=0;i--) {
+    alReves+=str[i]
   }
-  function invertirPalabra(txt) {
-    return txt.split("").reverse().join("");
-  }
-  return fraseFinalRetornada;
+  return alReves.split(" ").reverse().join(" ");
 }
 
 
@@ -111,15 +98,15 @@ function buscoInterseccion(arreglo1, arreglo2) {
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí
-  var arrayDeInterseccions= []
-  arreglo1.forEach(function(elemento1){
-  arreglo2.forEach(function(elemento2){
-    if (elemento1===elemento2) arrayDeInterseccions.push(elemento1)
-  })
- })
- if (arrayDeInterseccions.length>0) {
-   return arrayDeInterseccions
-  } else return []
+ var intersecciónes=[]
+ for (var i= 0; i<arreglo1.length; i+=1) {
+   for (var j=0; j<arreglo2.length; j+=1) {
+     if (arreglo1[i]===arreglo2[j]) {
+       intersecciónes.push(arreglo1[i])
+     }
+   }
+ }
+ return intersecciónes;
 }
 
 
